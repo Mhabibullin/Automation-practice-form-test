@@ -40,12 +40,12 @@ public class FirstTest {
 
         $(byText("Submit")).scrollIntoView(true).click();
 
-        $(".modal-body").shouldHave(Condition.text("Ivan"));
-        $(".modal-body").shouldHave(Condition.text("Petrov"));
+        $(".modal-body").shouldHave(Condition.text("Ivan Petrov"));
         $(".modal-body").shouldHave(Condition.text("Ivan@Petrov.com"));
         $(".modal-body").shouldHave(Condition.text("Male"));
         $(".modal-body").shouldHave(Condition.text("8922222222"));
-        $(".modal-body").shouldHave(Condition.text("20 July, 2021"));
+        $(".modal-body").shouldHave(Condition.text("05 June,1988"));
+        $(".modal-body").shouldHave(Condition.text("Arts"));
         $(".modal-body").shouldHave(Condition.text("Sports"));
         $(".modal-body").shouldHave(Condition.text("1.jpg"));
         $(".modal-body").shouldHave(Condition.text("Moscow, Lenina 1"));
