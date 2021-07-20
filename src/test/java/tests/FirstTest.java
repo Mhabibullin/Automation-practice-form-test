@@ -1,9 +1,11 @@
 package tests;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import static com.codeborne.selenide.Selectors.byName;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
@@ -32,14 +34,22 @@ public class FirstTest {
         $("#subjectsInput").setValue("Art").pressEnter();
         $(byText("Sports")).click();
         $("#uploadPicture").uploadFromClasspath("1.jpg");
+        $("#currentAddress").setValue("Moscow, Lenina 1");
+        $("#react-select-3-input").setValue("NCR").pressEnter();
+        $("#react-select-4-input").setValue("Delhi").pressEnter();
 
+        $(byText("Submit")).scrollIntoView(true).click();
 
-
-
-
-
-
-        $("#submit").click();
+        $(".modal-body").shouldHave(Condition.text("Ivan"));
+        $(".modal-body").shouldHave(Condition.text("Petrov"));
+        $(".modal-body").shouldHave(Condition.text("Ivan@Petrov.com"));
+        $(".modal-body").shouldHave(Condition.text("Male"));
+        $(".modal-body").shouldHave(Condition.text("8922222222"));
+        $(".modal-body").shouldHave(Condition.text("20 July, 2021"));
+        $(".modal-body").shouldHave(Condition.text("Sports"));
+        $(".modal-body").shouldHave(Condition.text("1.jpg"));
+        $(".modal-body").shouldHave(Condition.text("Moscow, Lenina 1"));
+        $(".modal-body").shouldHave(Condition.text("NCR Delhi"));
 
         }
 
