@@ -4,10 +4,9 @@ import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.WebDriverRunner.driver;
+
 
 
 public class FirstTest {
@@ -30,6 +29,10 @@ public class FirstTest {
         $(".react-datepicker__month-select").selectOptionByValue("5");
         $(".react-datepicker__year-select").selectOptionByValue("1988");
         $(".react-datepicker__day--005").click();
+        $("#subjectsInput").setValue("Art").pressEnter();
+        $(byText("Sports")).click();
+        $("#uploadPicture").uploadFromClasspath("1.jpg");
+
 
 
 
