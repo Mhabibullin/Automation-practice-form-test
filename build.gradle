@@ -1,19 +1,25 @@
 plugins {
-    id 'java-library'
+    id 'java-library' //легковеснее, чем java
 }
 
 repositories {
     mavenCentral()
 }
 
-dependencies {
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'  //работа с русс.яз.
+    sourceCompatibility = JavaVersion.VERSION_1_8 //указание версии java
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+    dependencies {
     testImplementation(
             "com.codeborne:selenide:5.22.2",
             "org.junit.jupiter:junit-jupiter:5.7.2")
     testRuntimeOnly(
-            "org.junit.jupiter:junit-jupiter-engine:5.7.2")
-
-}
+            "org.junit.jupiter:junit-jupiter-engine:5.7.2",
+            "org.slf4j:slf4j-simple:1.7.30") //Логи чтобы не выводилось ничего лишнего в консоль
+    }
 
 test {
     useJUnitPlatform()
