@@ -1,14 +1,13 @@
-package tests;
+package guru.qa.docs.tests;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Selectors.byName;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.*;
-
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 
 
 public class FirstTest {
@@ -51,7 +50,7 @@ public class FirstTest {
         $(".modal-body").shouldHave(Condition.text("Moscow, Lenina 1"));
         $(".modal-body").shouldHave(Condition.text("NCR Delhi"));
 
-        }
-
     }
+
+}
 
