@@ -26,10 +26,7 @@ public class FirstTest {
         $("#userEmail").setValue("Ivan@Petrov.com");
         $(byText("Male")).click();
         $("#userNumber").setValue("8922222222");
-        $("#dateOfBirthInput").click();
-        $(".react-datepicker__month-select").selectOptionByValue("5");
-        $(".react-datepicker__year-select").selectOptionByValue("1988");
-        $(".react-datepicker__day--005").click();
+
         $("#subjectsInput").setValue("Art").pressEnter();
         $(byText("Sports")).click();
         $("#uploadPicture").uploadFromClasspath("1.jpg");
