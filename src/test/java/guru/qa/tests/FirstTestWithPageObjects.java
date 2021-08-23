@@ -5,6 +5,7 @@ import com.codeborne.selenide.Configuration;
 import com.github.javafaker.Faker;
 import guru.qa.pages.RegistrationPage;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
@@ -28,6 +29,7 @@ public class FirstTestWithPageObjects {
         Configuration.startMaximized = true;
     }
 
+    @Disabled
     @Test
     void positiveFillTest() {
         registrationPage.openPage();
