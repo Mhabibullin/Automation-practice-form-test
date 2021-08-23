@@ -2,6 +2,7 @@ package guru.qa.tests;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
+import guru.qa.components.TestBase;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -12,7 +13,7 @@ import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
 
-public class FirstTest {
+public class FirstTest extends TestBase {
 
     @BeforeAll
     static void setup() {
