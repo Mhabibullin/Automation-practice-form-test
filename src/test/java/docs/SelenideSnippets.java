@@ -1,4 +1,4 @@
-package guru.qa.docs;
+package docs;
 
 import com.codeborne.selenide.*;
 import org.openqa.selenium.Keys;
@@ -136,7 +136,7 @@ public class SelenideSnippets {
 
         $("").shouldBe(checked); // for checkboxes
 
-        // Warning! Only checks if it is in DOM, not if it is visible! You don't need it in most guru.qa.docs.tests!
+        // Warning! Only checks if it is in DOM, not if it is visible! You don't need it in most docs.tests!
         $("").should(exist);
 
         // Warning! Checks only the "disabled" attribute! Will not work with many modern frameworks

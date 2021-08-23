@@ -39,4 +39,3 @@ target/
 /gradlew.bat
 .todo
 *.properties
-/src/test/java/guru/qa/docs
