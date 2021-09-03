@@ -18,7 +18,6 @@ public class FirstTest extends TestBase {
     @BeforeAll
     static void setup() {
         Configuration.baseUrl = "https://demoqa.com";
-        Configuration.startMaximized = true;
     }
 
     @Test
